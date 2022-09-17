@@ -33,3 +33,32 @@ console.log("Second Largest Number:- "+secondMax(arr));
 
  
 
+
+   // By Sorting
+// for second largest value
+   function print2largest(arr, arr_size) {
+      let i, first, second;
+      if (arr_size < 2) {
+          document.write(" Invalid Input ");
+          return;
+      }
+      arr.sort();
+      for (i = arr_size - 2; i >= 0; i--) {
+          if (arr[i] != arr[arr_size - 1]) {
+              console.log("The second largest element is " + arr[i]);
+              return;
+          }
+      }
+      console.log("There is no second largest element");
+  }
+  let n = arr.length;
+  print2largest(arr, n);
+
+//for second smallest value
+let m = arr.length;
+arr.sort();
+console.log("second smallest element is "+arr[1]);
+ 
+
+
+
